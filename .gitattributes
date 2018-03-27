@@ -1,1 +1,2 @@
-syntax=Python
+syntax=C++
+set syntax=Python:
