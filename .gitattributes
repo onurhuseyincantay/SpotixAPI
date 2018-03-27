@@ -1,2 +1,1 @@
-syntax=C++
-set syntax=Python:
+*.py linguist-language=Python
