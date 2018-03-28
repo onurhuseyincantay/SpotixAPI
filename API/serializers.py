@@ -20,3 +20,8 @@ class AlbumSerializer(serializers.ModelSerializer):
     class Meta :
         model = Album
         fields = '__all__'
+    def create(self, validated_data):
+        singer = validated_data.pop('singer')
+        type = validated_data.pop('type')
+        album = Album.objects.create(singer=singer,type=type,**validated_data)
+        return album

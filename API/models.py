@@ -27,8 +27,17 @@ class Album(models.Model):
     song_count = models.IntegerField(null=False)
     description = models.TextField(null=True)
     album_cover = models.TextField(null=True)
-    release_date = models.DateTimeField(auto_created=True)
+    release_date = models.DateTimeField(null=False)
     singer = models.ForeignKey(Singer,on_delete=models.CASCADE)
+
+    # def __init__(self,type,songCount,desc,albumCover,realease,singer):
+    #     self.type = type
+    #     self.song_count = songCount
+    #     self.description = desc
+    #     self.album_cover = albumCover
+    #     self.release_date = realease
+    #     self.singer = singer
+
 
 class Comment(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)

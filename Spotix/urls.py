@@ -18,6 +18,6 @@ from django.urls import path
 from  API import views
 
 urlpatterns = [
-    path('getAlbums/',views.getAlbums.as_view()),
+    path('Albums',views.getAlbums.as_view()),
     path('admin/', admin.site.urls),
 ]
